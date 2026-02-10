@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import assets from '../assets/assets';
+import assets from '../assets/assets.js';
 import { AuthContext } from '../../context/AuthContext.jsx';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
