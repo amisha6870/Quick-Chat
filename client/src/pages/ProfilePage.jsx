@@ -34,15 +34,16 @@ const ProfileUpdate = () => {
       };
 
       const res = await axios.put(
-        "http://localhost:5000/api/auth/update-profile",
+        `${import.meta.env.VITE_BACKEND_URL}/api/auth/update-profile`,
         formData,
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`, // ✅ Send token here
+            Authorization: `Bearer ${token}`,
           },
         }
       );
+
 
       console.log("✅ Profile updated successfully:", res.data);
       alert("Profile updated successfully!");

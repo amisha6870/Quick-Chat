@@ -86,7 +86,7 @@ const LoginPage = () => {
               type="email"
               placeholder="Email Address"
               required
-              className="p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="p-2 border border-gray-500 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
 
             <input
