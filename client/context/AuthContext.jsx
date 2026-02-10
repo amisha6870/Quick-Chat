@@ -10,6 +10,7 @@ console.log("Backend URL:", backendUrl);
 // ✅ SET AXIOS DEFAULTS
 axios.defaults.baseURL = backendUrl;
 axios.defaults.headers.common["Content-Type"] = "application/json";
+axios.defaults.withCredentials = true;
 
 export const AuthContext = createContext();
 
@@ -103,10 +104,12 @@ export const AuthProvider = ({ children }) => {
   const connectSocket = (userData) => {
     if (!userData || socket?.connected) return;
 
-    const newSocket = io(backendUrl, {
-      query: { userId: userData._id },
-      transports: ["websocket"],
-    });
+  const newSocket = io(backendUrl, {
+    query: { userId: userData._id },
+    transports: ["websocket"],
+    withCredentials: true,
+  });
+
 
     newSocket.on("getOnlineUsers", (userIds) => {
       setOnlineUsers(userIds);
