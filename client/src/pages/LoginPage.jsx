@@ -71,7 +71,7 @@ const LoginPage = () => {
             onChange={(e) => setFullName(e.target.value)}
             value={fullName}
             type="text"
-            className="p-2 border border-gray-500 rounded-md focus:outline-none"
+            className="p-2 border border-gray-500 text-black bg-white rounded-md focus:outline-none"
             placeholder="Full Name"
             required
           />
