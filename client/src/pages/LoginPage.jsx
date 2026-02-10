@@ -95,7 +95,7 @@ const LoginPage = () => {
               type="password"
               placeholder="Password"
               required
-              className="p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="p-2 border border-gray-500 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </>
         )}
@@ -106,7 +106,7 @@ const LoginPage = () => {
             onChange={(e) => setBio(e.target.value)}
             value={bio}
             rows={4}
-            className="p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="p-2 border border-gray-500 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             placeholder="Provide a short bio..."
             required
           ></textarea>
